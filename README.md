@@ -27,7 +27,7 @@ This example lists all pages and shows a thumbnail image for each page.
 Requirements:
  - Every page must exist in its own subfolder of the content folder.
  - Every subfolder must contain an image called "thumb.jpg".
- - 
+
 ```
 <ul>
 	{% for page in pages %}
