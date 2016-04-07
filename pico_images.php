@@ -62,8 +62,6 @@ final class Pico_Images extends AbstractPicoPlugin{
 	 * Return a list of images with image information
 	 */
 	private function images_list($images_path){
-        $content_dir_name = basename($content_path);
-
 		$data = array();
 		$files = glob($images_path.'*');
 		
