@@ -2,7 +2,16 @@
 This plugin allows you to work with images within a Pico theme.
 
 ##Install
-Move pico_images.php file into the plugins directory.
+Move pico_images.php file into the plugins directory.  
+The plugin will not function correctly due to Pico's default htaccess file.  
+
+To make it work change the following line in your htaccess file:  
+`RewriteRule ^(\.git|config|content|lib|vendor)(/.*)?$.`  
+To:  
+`RewriteRule ^(\.git|config|content|lib|vendor)(/.*.md)?$`  
+
+Or add the following line at the beginning of your htaccess file, just after `RewriteEngine On`:  
+`RewriteRule ^.*\.(gif|jpe?g|png|webp)$ - [NC,L]`
 
 ##Directory structure
 The plugin works best if you structure all your pages in subdirectories within the content directory.
