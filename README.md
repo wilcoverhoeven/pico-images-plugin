@@ -1,7 +1,8 @@
-#Pico images plugin for Pico 1.x
+# Pico images plugin for Pico 1.x
+***THIS PLUGIN IS NO LONGER MAINTAINT***
 This plugin allows you to work with images within a Pico theme.
 
-##Install
+## Install
 Move pico_images.php file into the plugins directory.  
 The plugin will not function correctly due to Pico's default htaccess file.  
 
@@ -13,7 +14,7 @@ To:
 Or add the following line at the beginning of your htaccess file, just after `RewriteEngine On`:  
 `RewriteRule ^.*\.(gif|jpe?g|png|webp)$ - [NC,L]`
 
-##Directory structure
+## Directory structure
 The plugin works best if you structure all your pages in subdirectories within the content directory.
 
 ```
@@ -29,12 +30,12 @@ content
         |___image2.bmp
 ```
 
-##Usage
+## Usage
 
-###Page parent URL
+### Page parent URL
 The URL of directory in which the page (markdown file) resides is accessible using the twig variable `{{ page.parent }}`.
 
-####Example usage
+#### Example usage
 This example lists all pages and shows a thumbnail image for each page.
 
 Requirements:
@@ -52,7 +53,7 @@ Requirements:
 </ul>
 ``` 
 
-###Images array
+### Images array
 The plugin will allso add all images in the same directory as the page (markdown file) to the array `{{ images }}`.
 
 Only images with the following extensions will be added to the images array:
@@ -67,7 +68,7 @@ An image has the following properties:
  - width, the width of the image
  - height, the height of the image
 
-####Example
+#### Example
 The following example displays all images in the same subdirectory as the page and excludes any image with the name "thumb".
 
 Requirements:
